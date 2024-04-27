@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pnoy Dishcovery - Recipes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Additional CSS to adjust image size */
+      .recipe-card img {
+        width: 250px;
+        height: 200px;
+        object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+        border-radius: 8px 8px 0 0; /* Add border radius to match card corners */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="navbar">
+        <img src="pics/logo.png" class="logo" alt="Pnoy Dishcovery Logo" />
+        <form class="search-bar">
+          <!-- Adjust action and method as needed -->
+          <input type="text" name="search_query" placeholder="Search..." />
+          <button type="submit">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </form>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipe.html">Recipes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="login.html">Log in</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Add your recipe container here -->
+    <div class="recipes-container">
+      <!-- Recipe cards -->
+      <div class="recipe-card">
+        <img src="pics/sinigang.jpg" alt="Sinigang" />
+        <h2 class="recipe-title">Sinigang</h2>
+        <p class="recipe-description">
+          A sour Filipino soup typically associated with tamarind. It is often
+          cooked with pork, beef, shrimp, or fish.
+        </p>
+      </div>
+
+      <div class="recipe-card">
+        <img src="pics/adobo.jpg" alt="Adobo" />
+        <h2 class="recipe-title">Adobo</h2>
+        <p class="recipe-description">
+          A Filipino chicken dish marinated in soy sauce, vinegar, and garlic,
+          and then browned in oil, simmered until tender, and served with the
+          reduced marinade.
+        </p>
+      </div>
+
+      <div class="recipe-card">
+        <img src="pics/karekare.jpg" alt="Kare-Kare" />
+        <h2 class="recipe-title">Kare-Kare</h2>
+        <p class="recipe-description">
+          A Filipino stew characterized by its rich peanut sauce. It is
+          typically made with oxtail, tripe, and vegetables such as eggplant,
+          banana flower, and string beans.
+        </p>
+      </div>
+
+      <div class="recipe-card">
+        <img src="pics/lumpia.jpg" alt="Lumpia" />
+        <h2 class="recipe-title">Lumpiang Shanghai</h2>
+        <p class="recipe-description">
+          Filipino-style spring rolls filled with ground pork, minced onions,
+          carrots, and spices, wrapped in thin spring roll wrappers and
+          deep-fried until crispy.
+        </p>
+      </div>
+
+      <!-- Add more recipe cards with images as needed -->
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

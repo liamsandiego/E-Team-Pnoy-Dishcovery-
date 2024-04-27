@@ -1,9 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register - Pnoy Dishcovery</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
     <div class="banner">
       <div class="navbar">
@@ -17,7 +19,7 @@
 
       <div class="content">
         <h2>Register</h2>
-        <form action="/api/register" method="POST" class="register-form">
+        <form id="registerForm" method="POST" class="register-form">
           <div class="input-box">
             <span class="icon"><ion-icon name="person"></ion-icon></span>
             <input
@@ -73,5 +75,38 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Gather form data
+          const formData = new FormData(this);
+
+          // Send form data to API endpoint
+          fetch("/api/register", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Failed to register user");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              // Handle successful registration
+              alert("User registered successfully");
+              // You can redirect the user or perform other actions here
+            })
+            .catch((error) => {
+              // Handle registration error
+              console.error("Error registering user:", error);
+              alert("Failed to register user");
+            });
+        });
+    </script>
   </body>
 </html>
